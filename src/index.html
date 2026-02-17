@@ -21,75 +21,6 @@
         pointer-events: auto !important;
       }
 
-      /* 2. Tab Container - Using extremely high z-index for clickability */
-      .about-tabs.swiper-pagination-bullets {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        margin-top: 50px;
-        position: relative !important;
-        z-index: 9999 !important; 
-        pointer-events: auto !important;
-        width: 100% !important;
-        bottom: 0 !important;
-      }
-
-      /* 3. Button Styles - Artistic Oval & Gray Inactive State */
-      .about-tabs .tab-btn.swiper-pagination-bullet {
-        /* Shape & Interaction */
-        width: auto !important;
-        height: auto !important;
-        padding: 14px 35px;
-        border-radius: 50px !important; /* Artistic Oval/Pill shape */
-        cursor: pointer !important;
-        pointer-events: all !important;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 !important;
-        position: relative;
-        z-index: 60 !important;
-        border: 1px solid #E2E8F0;
-        
-        /* Colors for Inactive State */
-        background-color: #F4F7FA !important; 
-        color: #637381 !important; 
-        opacity: 1 !important; /* Override Swiper default transparency */
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      /* 4. Active Tab Style (Primary Blue) */
-      .about-tabs .tab-btn.swiper-pagination-bullet-active {
-        background-color: #4A6CF7 !important;
-        color: #ffffff !important;
-        border-color: #4A6CF7 !important;
-        box-shadow: 0px 8px 15px rgba(74, 108, 247, 0.25);
-      }
-
-      /* 5. Hover State */
-      .about-tabs .tab-btn:hover:not(.swiper-pagination-bullet-active) {
-        background-color: #e5eefd !important;
-        color: #4A6CF7 !important;
-        transform: translateY(-2px); /* Slight artistic lift */
-      }
-
-      /* 6. Dark Mode Adjustments */
-      html.dark .about-tabs .tab-btn.swiper-pagination-bullet {
-        background-color: #1F243E !important;
-        color: #A0AEC0 !important;
-        border-color: #34374A;
-      }
-      
-      html.dark .about-tabs .tab-btn.swiper-pagination-bullet-active {
-        background-color: #4A6CF7 !important;
-        color: #ffffff !important;
-        border-color: #4A6CF7 !important;
-      }
-
       /* Limit image growth and remove bottom padding/margins */
       .about-img-container {
         max-height: 350px; /* Forces images to stay small vertically */
@@ -152,12 +83,15 @@
                   <a href="#home" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Home </a>
                 </li>
                 <li class="menu-item">
-                  <a href="#about" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Features</a>
+                  <a href="#about" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> About</a>
                 </li>
                 <li class="menu-item">
                   <a href="#work-process" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">
                     How It Works
                   </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#features" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Features</a>
                 </li>
                 <li class="menu-item">
                   <a href="#pricing" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Pricing </a>
@@ -340,13 +274,10 @@
               Study, work, or relax with natural voice audio — unlimited use, free or a one-time $9.99 upgrade.
             </p>
           </div>
-          <!-- Swiper Container -->
-          <div class="swiper about-swiper">
-            <div class="swiper-wrapper">
-
-              <!-- SLIDE 1: Too much reading -->
-              <div class="swiper-slide">
-                <div class="flex flex-wrap items-center justify-between -mx-4">
+          
+          <div>
+            <!-- Block 1: Too much reading -->
+            <div class="flex flex-wrap items-center justify-between -mx-4 mb-20">
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="about-img-container relative z-10 mx-auto mb-6 w-full max-w-[320px] pb-4 lg:mx-0 lg:mb-0">
                       <img src="images/about/about-1-light.png" alt="about image" class="max-w-full mx-auto" />
@@ -370,11 +301,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- SLIDE 2: Zero Subscriptions -->
-              <div class="swiper-slide">
-                <div class="flex flex-wrap items-center justify-between -mx-4">
+            <!-- Block 2: Time pressure -->
+            <div class="flex flex-wrap items-center justify-between -mx-4 mb-20">
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="lg:max-w-[510px]">
                       <span class="mb-4 block text-lg font-medium text-primary md:text-[22px]"> For Professionals </span>
@@ -398,11 +327,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- SLIDE 3: Everyday Listening -->
-              <div class="swiper-slide">
-                <div class="flex flex-wrap items-center justify-between -mx-4">
+            <!-- Block 3: Everyday Listening -->
+            <div class="flex flex-wrap items-center justify-between -mx-4">
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="about-img-container relative z-10 mx-auto mb-6 w-full max-w-[320px] pb-4 lg:mx-0 lg:mb-0">
                       <img src="images/about/about-1-light.png" alt="about image" class="max-w-full mx-auto" />
@@ -426,11 +353,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              
-            </div>
-            <!-- Tab Buttons Container -->
-            <div class="about-tabs"></div>
           </div>
         </div>
         
@@ -2175,37 +2097,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      // Define titles for the tabs
-      const tabTitles = [
-        "Students", 
-        "Professionals", 
-        "Readers"
-      ];
-
-      // Initialize Swiper for the About Section
-      var aboutSwiper = new Swiper(".about-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: false,
-        autoplay: false,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true
-        },
-        autoHeight: true,
-        speed: 500,
-        observer: true,
-        observeParents: true,
-        preventClicks: false, 
-        pagination: {
-          el: ".about-tabs",
-          clickable: true,
-          renderBullet: function (index, className) {
-            return '<span class="' + className + ' tab-btn">' + tabTitles[index] + '</span>';
-          },
-        },
-      });
-
       const pageLink = document.querySelectorAll(".menu-scroll");
 
       pageLink.forEach((elem) => {
