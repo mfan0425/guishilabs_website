@@ -7,47 +7,6 @@
     <title>Aura Reader App Landing Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <style>
-      /* 1. Container Stacking Fixes */
-      #about {
-        position: relative;
-        z-index: 20;
-      }
-
-      /* Ensure Hero section doesn't bleed over the About section */
-      #home .absolute {
-        pointer-events: none !important;
-      }
-      #home a, #home button {
-        pointer-events: auto !important;
-      }
-
-      /* Limit image growth and remove bottom padding/margins */
-      .about-img-container {
-        max-height: 400px; /* Forces images to stay small vertically */
-        overflow: visible;
-      }
-
-      .about-img-container img {
-        max-height: 380px;
-        width: auto;
-        object-fit: contain;
-      }
-
-      /* Tighten the text content side */
-      #about h2 {
-        margin-bottom: 12px !important; /* mb-4 to mb-3 equivalent */
-      }
-
-      #about p {
-        margin-bottom: 20px !important; /* Reduce paragraph spacing */
-      }
-
-      /* Bring the feature list (01, 02) closer together */
-      #about .mb-\[30px\] {
-        margin-bottom: 15px !important;
-      }
-    </style>
   </head>
   <body class="bg-white dark:bg-black">
     <!-- ======= Header Start ======= -->
@@ -209,7 +168,7 @@
               <div class="wow fadeInUp relative z-10 mx-auto w-full max-w-[530px] pt-8 lg:mr-0" data-wow-delay=".3s">
                 <img src="images/hero/aurareaderhero.png" alt="hero image" class="max-w-full mx-auto" />
                   <div class="absolute top-0 left-0 right-0 w-full rounded-full max-auto -z-10 aspect-square bg-gradient-1 pointer-events-none">
-                  <div class="absolute right-0 top-5">
+                  <div class="absolute right-0 top-5 pointer-events-none">
                     <svg width="72" height="51" viewBox="0 0 72 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_5_3665)">
                         <path
@@ -228,7 +187,7 @@
                       </defs>
                     </svg>
                   </div>
-                  <div class="absolute left-0 bottom-10">
+                  <div class="absolute left-0 bottom-10 pointer-events-none">
                     <svg width="65" height="36" viewBox="0 0 65 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         fill-rule="evenodd"
@@ -265,13 +224,13 @@
       <!-- ======= Hero End ======= -->
 
       <!-- ======= About Start ======= -->
-      <section id="about" class="relative pt-[80px] pb-[50px]">
+      <section id="about" class="relative z-20 pt-[80px] pb-[50px]">
         <div class="container lg:max-w-[1120px]">
           <div class="wow fadeInUp mx-auto mb-14 max-w-[690px] text-center lg:mb-[70px]" data-wow-delay=".2s">
-            <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">
+            <h2 class="mb-3 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">
               Read Less. Listen More.
             </h2>
-            <p class="text-base text-body">
+            <p class="mb-5 text-base text-body">
               Study, work, or relax with natural voice audio — unlimited use, free or a one-time $9.99 upgrade.
             </p>
           </div>
@@ -280,8 +239,8 @@
             <!-- Block 1: Too much reading -->
             <div class="flex flex-wrap items-center justify-between -mx-4 mb-20">
                   <div class="w-full px-4 lg:w-1/2">
-                    <div class="about-img-container relative z-10 mx-auto mb-6 w-full max-w-420px] pb-4 lg:mx-0 lg:mb-0">
-                      <img src="images/about/aurareader_readfile-light.png" alt="about image" class="max-w-full mx-auto" />
+                    <div class="relative z-10 mx-auto mb-6 w-full max-w-[420px] pb-4 lg:mx-0 lg:mb-0 max-h-[400px] overflow-visible">
+                      <img src="images/about/aurareader_readfile-light.png" alt="about image" class="max-w-full mx-auto max-h-[340px] w-auto object-contain" />
                       <div class="absolute top-0 right-5 -z-10">
                         <svg width="72" height="50" viewBox="0 0 72 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_33_10)">
@@ -297,8 +256,8 @@
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="lg:ml-auto lg:max-w-[510px]">
                       <span class="mb-4 block text-lg font-medium text-primary md:text-[22px]"> For Students </span>
-                      <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">Too much reading</h2>
-                      <p class="mb-[30px] text-base leading-relaxed text-body">Turn chapters, PDFs, and reading assignments into audio. <br> Listen while walking, commuting, or reviewing — and keep up with heavy workloads.</p>
+                      <h2 class="mb-3 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">Too much reading</h2>
+                      <p class="mb-[15px] text-base leading-relaxed text-body">Turn chapters, PDFs, and reading assignments into audio. <br> Listen while walking, commuting, or reviewing — and keep up with heavy workloads.</p>
                     </div>
                   </div>
                 </div>
@@ -308,13 +267,13 @@
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="lg:max-w-[510px]">
                       <span class="mb-4 block text-lg font-medium text-primary md:text-[22px]"> For Professionals </span>
-                      <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">Time pressure</h2>
-                      <p class="mb-[30px] text-base leading-relaxed text-body">Convert reports, legal documents, research, or long emails into audio. <br>Stay productive by listening during commutes, workouts, or daily routines.</p>
+                      <h2 class="mb-3 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">Time pressure</h2>
+                      <p class="mb-[15px] text-base leading-relaxed text-body">Convert reports, legal documents, research, or long emails into audio. <br>Stay productive by listening during commutes, workouts, or daily routines.</p>
                     </div>
                   </div>
                   <div class="order-first w-full px-4 lg:order-last lg:w-1/2">
-                    <div class="about-img-container relative z-10 mx-auto mb-6 w-full max-w-420px] pb-4 lg:mx-0 lg:mb-0">
-                      <img src="images/about/aurareader_screencapture-light.png" alt="about image" class="max-w-full mx-auto" />
+                    <div class="relative z-10 mx-auto mb-6 w-full max-w-[420px] pb-4 lg:mx-0 lg:mb-0 max-h-[400px] overflow-visible">
+                      <img src="images/about/aurareader_screencapture-light.png" alt="about image" class="max-w-full mx-auto max-h-[340px] w-auto object-contain" />
                       <div class="absolute top-0 right-5 -z-10">
                         <svg width="72" height="50" viewBox="0 0 72 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_34_10)">
@@ -332,8 +291,8 @@
             <!-- Block 3: Everyday Listening -->
             <div class="flex flex-wrap items-center justify-between -mx-4">
                   <div class="w-full px-4 lg:w-1/2">
-                    <div class="about-img-container relative z-10 mx-auto mb-6 w-full max-w-420px] pb-4 lg:mx-0 lg:mb-0">
-                      <img src="images/about/aurareader_story_gen-light.png" alt="about image" class="max-w-full mx-auto" />
+                    <div class="relative z-10 mx-auto mb-6 w-full max-w-[420px] pb-4 lg:mx-0 lg:mb-0 max-h-[400px] overflow-visible">
+                      <img src="images/about/aurareader_story_gen-light.png" alt="about image" class="max-w-full mx-auto max-h-[340px] w-auto object-contain" />
                       <div class="absolute top-0 right-5 -z-10">
                         <svg width="72" height="50" viewBox="0 0 72 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_33_10)">
@@ -349,8 +308,8 @@
                   <div class="w-full px-4 lg:w-1/2">
                     <div class="lg:ml-auto lg:max-w-[510px]">
                       <span class="mb-4 block text-lg font-medium text-primary md:text-[22px]"> Everyday Listening </span>
-                      <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">No time to sit and read</h2>
-                      <p class="mb-[30px] text-base leading-relaxed text-body">Turn articles, web pages, or public-domain books into audiobooks. <br>Enjoy your reading while cooking, cleaning, or relaxing.</p>
+                      <h2 class="mb-3 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">No time to sit and read</h2>
+                      <p class="mb-[15px] text-base leading-relaxed text-body">Turn articles, web pages, or public-domain books into audiobooks. <br>Enjoy your reading while cooking, cleaning, or relaxing.</p>
                     </div>
                   </div>
                 </div>
