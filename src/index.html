@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aura Reader App Landing Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <style>
       /* 1. Container Stacking Fixes */
       #about {
@@ -186,7 +187,7 @@
                     </span>
                   </a>
 
-                  <a href="javascript:void(0)" class="inline-flex items-center py-4 mb-6 text-black glightbox hover:text-primary dark:text-white dark:hover:text-primary">
+                  <a href="https://www.youtube.com/watch?v=ZMbC0DCl8-Q" class="inline-flex items-center py-4 mb-6 text-black video-popup hover:text-primary dark:text-white dark:hover:text-primary">
                     <span class="mr-[22px] flex h-[60px] w-[60px] items-center justify-center rounded-full border-2 border-current">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -196,8 +197,8 @@
                       </svg>
                     </span>
                     <span class="text-base font-medium">
-                      <span class="block text-sm"> Watch Demo </span>
-                      Hear the Voices
+                      <span class="block text-sm"> Watch Video </span>
+                      Narrated with Aura Reader
                     </span>
                   </a>
                 </div>
@@ -882,8 +883,8 @@
             <div class="flex flex-wrap -mx-4">
               <div class="self-center w-full px-4 lg:w-1/2">
                 <div class="wow fadeInUp mx-auto max-w-[530px] text-center lg:ml-0 lg:text-left" data-wow-delay=".2s">
-                  <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[38px] md:leading-tight">Start Listening — Free Forever</h2>
-                  <p class="mb-10 text-base text-body">Natural voices, unlimited daily use, and full privacy on your Mac. Upgrade anytime for just $9.99 lifetime — no subscription.</p>
+                  <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[38px] md:leading-tight">Listen Anywhere — Free Forever</h2>
+                  <p class="mb-10 text-base text-body">Natural voices, unlimited daily listening, and full privacy on your Mac. Turn documents into audio and listen on the go — walking, commuting, or relaxing. Upgrade anytime for just $9.99 lifetime. No subscription.</p>
 
                   <div class="-mx-[10px] flex flex-wrap items-center justify-center lg:justify-start">
                     <div class="inline-block px-[10px]">
@@ -1995,6 +1996,7 @@
     <!-- ======= JS Files ======= -->
     <!-- Swiper JS Library -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
     <script>
       const pageLink = document.querySelectorAll(".menu-scroll");
@@ -2051,6 +2053,14 @@
 
       //activate accordion function
       initAcc(".faqs", true);
+
+      // Add this to your existing script section
+      const lightbox = GLightbox({
+        selector: '.video-popup',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+      });
     </script>
   </body>
 </html>
