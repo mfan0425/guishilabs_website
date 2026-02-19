@@ -1,0 +1,19 @@
+# Generic build and output directories
+build/
+bin/
+out/
+dist/
+
+# Dependency directories (optional but recommended)
+node_modules/
+venv/
+.venv/
+env/
+
+# IDE-specific folders
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
