@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
-    "predeploy": "npm run build && touch build/.nojekyll",
+    "predeploy": "npm run build && cp CNAME build/CNAME && touch build/.nojekyll",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
