@@ -123,7 +123,7 @@
           <div class="flex flex-wrap items-center -mx-4">
             <div class="w-full px-4 lg:w-7/12">
               <div class="wow fadeInUp mb-12 lg:mb-0 lg:max-w-[570px]" data-wow-delay=".2s">
-                <span class="mb-5 block text-lg font-medium leading-tight text-black dark:text-white sm:text-[22px] xl:text-[22px]"> Text-to-Speech for Mac </span>
+                <span class="mb-5 block text-lg font-medium leading-tight text-black dark:text-white sm:text-[22px] xl:text-[22px]"> Offlice Text-to-Speech for Mac </span>
                 <h1 class="mb-6 text-3xl font-bold leading-tight text-black dark:text-white sm:text-[40px] md:text-[50px] lg:text-[42px] xl:text-[50px]">
                   Pay 
                   <span class="inline text-transparent bg-gradient-1 bg-clip-text"> Once</span> 
@@ -172,6 +172,13 @@
                       Narrated with Aura Reader
                     </span>
                   </a>
+                </div>
+                <div class="inline-flex items-center px-5 py-2 mt-2 text-white rounded-full bg-gradient-to-r from-[#00BE6C] to-[#4ADE80]">
+                  <span class="mr-2 text-2xl">🚀</span>
+                    <div class="text-left">
+                      <span class="block text-lg font-bold">Launch Week Special — Free Lifetime License</span>
+                      <span id="countdown-timer" class="block text-sm opacity-90 font-medium">(Ends in 7 days)</span>
+                    </div>
                 </div>
               </div>
             </div>
@@ -2041,6 +2048,31 @@
             submitBtn.innerText = originalBtnText;
           });
         });
+      }
+
+      // Countdown Timer
+      const countdownElement = document.getElementById('countdown-timer');
+      if (countdownElement) {
+        const endDate = new Date('March 15, 2026 23:59:59').getTime();
+
+        const updateTimer = () => {
+          const now = new Date().getTime();
+          const distance = endDate - now;
+
+          if (distance < 0) {
+            countdownElement.innerHTML = "(Sale Ended)";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+          countdownElement.innerHTML = `(Ends in ${days}d ${hours}h ${minutes}m)`;
+        };
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
       }
     </script>
   <script defer src="bundle.js"></script></body>
