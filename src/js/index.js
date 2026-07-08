@@ -90,10 +90,12 @@ GLightbox({
 
     // ===  show or hide the back-top-top button
     const backToTop = document.querySelector('.back-to-top');
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      backToTop.style.display = 'flex';
-    } else {
-      backToTop.style.display = 'none';
+    if (backToTop) {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        backToTop.style.display = 'flex';
+      } else {
+        backToTop.style.display = 'none';
+      }
     }
   };
 
@@ -175,9 +177,12 @@ GLightbox({
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
-  document.querySelector('.back-to-top').onclick = () => {
-    scrollTo(document.documentElement);
-  };
+  const backToTopBtn = document.querySelector('.back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.onclick = () => {
+      scrollTo(document.documentElement);
+    };
+  }
   /* ========  scroll to top  end ========= */
 })();
 
